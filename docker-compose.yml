@@ -1,0 +1,29 @@
+services:
+  php:
+    build:
+      context: ./docker/
+    ports:
+      - "0:80"
+    volumes:
+      - .:/var/www/html
+    user: "1000:1000"
+    tmpfs:
+      - /tmp:rw
+      - /.composer:rw
+  db:
+    volumes:
+      - database_data:/var/lib/mysql
+    image: mysql:latest
+    ports:
+      - "0:3306"
+    restart: always
+    env_file:
+      - .env.local
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "0:8080"
+
+volumes:
+  database_data:
