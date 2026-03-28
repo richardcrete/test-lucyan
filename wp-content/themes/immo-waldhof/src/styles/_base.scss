@@ -1,0 +1,40 @@
+body {
+  font-size: var(--p-size);
+  background-color: var(--background);
+  color: var(--text);
+}
+
+a {
+  text-decoration: none;
+}
+
+.h1 {
+  font-size: var(--h1-size);
+  font-family: var(--font-primary), serif;
+}
+
+.h2 {
+  font-size: var(--h2-size);
+  font-family: var(--font-secondary), sans-serif;
+}
+
+.h3 {
+  font-size: var(--h3-size);
+  font-family: var(--font-secondary), sans-serif;
+}
+
+.h4 {
+  font-size: var(--h4-size);
+}
+
+.h5 {
+  font-size: var(--h5-size);
+}
+
+.h6 {
+  font-size: var(--h6-size);
+}
+
+button {
+  font-size: var(--button-size);
+}
