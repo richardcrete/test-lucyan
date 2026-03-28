@@ -1,0 +1,54 @@
+// Import fonts from Google
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+// Breakpoints
+$minXs: 320px;
+$maxXs: 480px;
+$minSm: 481px;
+$maxSm: 600px;
+$minMd: 601px;
+$maxMd: 768px;
+$minLg: 769px;
+$maxLg: 1024px;
+$minXl: 1025px;
+$maxXl: 1280px;
+$min2xl: 1281px;
+
+:root {
+  // Colors
+  --color-white: #FFFFFF;
+  --color-beige-light: #FAF5F0;
+  --color-beige-dark: #EDD7C3;
+  --color-primary: #785D32;
+  --color-primary-active: #967034;
+  --color-secondary: #00497E;
+  --color-secondary-active: #005695;
+  --color-tertiary: #002540;
+  --color-quaternary: #EF5B2E;
+  --color-grey-light: #D5D5D5;
+  --color-grey: #9B9B9B;
+  --color-grey-dark: #666666;
+  --color-black: #000000;
+
+  // Fonts & sizes
+  --font-primary: 'Noto Serif';
+  --font-secondary: 'Syne';
+  --font-tertiary: 'Manrope';
+  --h1-size: 28px;
+  --h2-size: 28px;
+  --h3-size: 18px;
+  --h4-size: 16px;
+  --h5-size: 15px;
+  --h6-size: 14px;
+  --p-size: 15px;
+  --button-size: 12px;
+
+  @media (min-width: $minLg) {
+    --h1-size: 60px;
+    --h2-size: 60px;
+    --h3-size: 24px;
+    --h4-size: 18px;
+  }
+}
