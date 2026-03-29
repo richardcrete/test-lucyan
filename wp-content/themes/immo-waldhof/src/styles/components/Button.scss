@@ -1,0 +1,25 @@
+.Button {
+  width: max-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 26px;
+  border-radius: 3px;
+  font-size: var(--button-size);
+  line-height: var(--button-line-height);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: var(--button-letter-spacing);
+
+  &.isLight {
+    background-color: var(--color-white);
+    color: var(--color-secondary);
+
+    svg {
+      path {
+        fill: var(--color-secondary);
+      }
+    }
+  }
+}

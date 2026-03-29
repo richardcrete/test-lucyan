@@ -1,7 +1,19 @@
 body {
+  font-family: var(--font-tertiary), sans-serif;
   font-size: var(--p-size);
-  background-color: var(--background);
-  color: var(--text);
+  line-height: var(--p-line-height);
+  background-color: var(--background); // TODO
+  color: var(--text); // TODO
+}
+
+.container {
+  padding: 0 20px;
+  width: auto;
+
+  @media (min-width: $minLg) {
+    max-width: 1400px;
+    margin: auto;
+  }
 }
 
 a {
@@ -33,8 +45,4 @@ a {
 
 .h6 {
   font-size: var(--h6-size);
-}
-
-button {
-  font-size: var(--button-size);
 }

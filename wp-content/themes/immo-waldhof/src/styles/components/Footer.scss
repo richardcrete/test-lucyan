@@ -1,0 +1,144 @@
+.Footer {
+  padding: 40px 0;
+  background-color: var(--color-secondary);
+  color: var(--color-beige-dark);
+
+  @media (min-width: $minLg) {
+    padding: 80px 0 50px 0;
+  }
+
+  &-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+
+    @media (min-width: $minLg) {
+      margin-bottom: 150px;
+    }
+
+    img {
+      width: 276px;
+
+      @media (min-width: $minLg) {
+        width: 395px;
+      }
+    }
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 45px;
+
+    @media (min-width: $minLg) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &-left {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+
+    @media (min-width: $minLg) {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 95px;
+    }
+  }
+
+  &-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @media (min-width: $minLg) {
+      justify-content: space-between;
+    }
+  }
+
+  &-facebook {
+    display: flex;
+    gap: 10px;
+
+    a {
+      font-size: var(--button-size);
+      line-height: var(--button-leight-height);
+      text-transform: uppercase;
+      letter-spacing: var(--button-letter-spacing);
+      color: var(--color-beige-dark);
+    }
+  }
+
+  &-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &-right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  &-row {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media (min-width: $minLg) {
+      flex-direction: row;
+      gap: 20px 30px;
+    }
+  }
+
+  &-usefulLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    a {
+      font-weight: 600;
+      line-height: var(--button-line-height);
+      color: var(--color-beige-dark);
+    }
+
+    @media (min-width: $minLg) {
+      gap: 30px 20px;
+    }
+  }
+
+  &-foot {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 45px;
+
+    a {
+      color: var(--color-grey-light);
+      opacity: 0.3;
+      transition: var(--button-transition);
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    @media (min-width: $minLg) {
+      justify-content: right;
+      margin-top: 30px;
+    }
+  }
+
+  &-lucyan {
+    svg {
+      path {
+        fill: var(--color-grey-light);
+      }
+    }
+  }
+}
