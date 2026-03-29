@@ -1,0 +1,81 @@
+.Menu {
+  width: 100%;
+  display: none;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 40px 13px 30px;
+  background-color: transparent;
+  transition: var(--animation-transition);
+
+  @media (min-width: $minLg) {
+    display: flex;
+  }
+
+  &-primary, &-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &-secondary {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    .Menu-item:first-child {
+      margin-right: -4px;
+    }
+  }
+
+  &-tertiary {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+  }
+
+  &-item {
+    font-size: var(--button-size);
+    font-weight: var(--button-weight);
+    line-height: var(--button-line-height);
+    text-transform: uppercase;
+    letter-spacing: var(--button-letter-spacing);
+
+    a {
+      color: var(--color-beige-dark);
+      transition: var(--animation-transition);
+    }
+  }
+
+  &-logo {
+    display: flex;
+    opacity: 0;
+    transition: var(--animation-transition);
+
+    img {
+      width: 148px;
+    }
+  }
+
+  &.isScrolled {
+    background-color: var(--color-white);
+
+    .Menu {
+      &-logo {
+        opacity: 1;
+      }
+
+      &-item {
+        a {
+          color: var(--color-primary);
+        }
+
+        svg {
+          path {
+            fill: var(--color-primary);
+          }
+        }
+      }
+    }
+  }
+}

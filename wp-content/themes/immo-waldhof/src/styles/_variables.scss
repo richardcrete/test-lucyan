@@ -47,7 +47,8 @@ $min2xl: 1281px;
   --button-size: 12px;
   --button-line-height: 14px;
   --button-letter-spacing: 1.8px;
-  --button-transition: 0.5s;
+  --animation-transition: 0.5s;
+  --button-weight: 600;
 
   @media (min-width: $minLg) {
     --h1-size: 60px;

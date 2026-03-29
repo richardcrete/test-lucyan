@@ -5,14 +5,26 @@
   align-items: center;
   gap: 10px;
   padding: 20px 26px;
-  border-radius: 3px;
   font-size: var(--button-size);
   line-height: var(--button-line-height);
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: var(--button-weight);
   letter-spacing: var(--button-letter-spacing);
 
-  &.isLight {
+  &.isSmall {
+    padding: 13px 26px;
+  }
+
+  &.isBorderRadius {
+    border-radius: 3px;
+  }
+
+  &.isPrimaryLight {
+    color: var(--color-primary);
+    background-color: var(--color-white);
+  }
+
+  &.isSecondaryLight {
     background-color: var(--color-white);
     color: var(--color-secondary);
 

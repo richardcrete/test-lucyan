@@ -12,12 +12,21 @@
     display: flex;
     padding: 54px 36px 64px 36px;
     background-color: var(--color-tertiary);
+    opacity: 1;
+    transition: var(--animation-transition);
+
+    @media (min-width: $minLg) {
+      padding: 85px 41px 100px 41px;
+    }
 
     img {
       width: 161px;
+
+      @media (min-width: $minLg) {
+        width: 186px;
+      }
     }
   }
-
 
   &.openMenu {
     .Header {
@@ -27,6 +36,14 @@
 
       &-content {
         width: 100%;
+      }
+    }
+  }
+
+  &.isScrolled {
+    .Header {
+      &-logo {
+        opacity: 0;
       }
     }
   }

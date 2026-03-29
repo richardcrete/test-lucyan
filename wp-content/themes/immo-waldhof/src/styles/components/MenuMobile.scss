@@ -1,4 +1,8 @@
 .MenuMobile {
+  @media (min-width: $minLg) {
+    display: none;
+  }
+
   &-header {
     display: flex;
   }
@@ -23,7 +27,7 @@
     flex: 1;
     border-bottom: 1px solid var(--color-beige-light);
     font-size: var(--button-size);
-    font-weight: 600;
+    font-weight: var(--button-weight);
     line-height: var(--button-line-height);
     text-transform: uppercase;
     letter-spacing: var(--button-letter-spacing);
@@ -83,7 +87,7 @@
 
   &-item {
     font-size: var(--button-size);
-    font-weight: 600;
+    font-weight: var(--button-weight);
     line-height: var(--button-line-height);
     letter-spacing: var(--button-letter-spacing);
     text-transform: uppercase;
@@ -108,7 +112,7 @@
       gap: 20px;
       padding: 26px;
       font-size: var(--button-size);
-      font-weight: 600;
+      font-weight: var(--button-weight);
       line-height: var(--button-line-height);
       text-transform: uppercase;
       letter-spacing: var(--button-letter-spacing);

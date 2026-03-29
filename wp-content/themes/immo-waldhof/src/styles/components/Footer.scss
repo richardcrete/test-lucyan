@@ -102,7 +102,7 @@
     gap: 20px;
 
     a {
-      font-weight: 600;
+      font-weight: var(--button-weight);
       line-height: var(--button-line-height);
       color: var(--color-beige-dark);
     }
@@ -121,7 +121,7 @@
     a {
       color: var(--color-grey-light);
       opacity: 0.3;
-      transition: var(--button-transition);
+      transition: var(--animation-transition);
 
       &:hover {
         opacity: 1;
