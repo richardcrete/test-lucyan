@@ -1,0 +1,157 @@
+.MenuMobile {
+  &-header {
+    display: flex;
+  }
+
+  &-icon {
+    display: none;
+    padding: 13px 11px;
+    border-right: 1px solid var(--color-beige-light);
+    border-bottom: 1px solid var(--color-beige-light);
+    background-color: var(--color-white);
+
+    img {
+      width: 41px;
+    }
+  }
+
+  &-burger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+    border-bottom: 1px solid var(--color-beige-light);
+    font-size: var(--button-size);
+    font-weight: 600;
+    line-height: var(--button-line-height);
+    text-transform: uppercase;
+    letter-spacing: var(--button-letter-spacing);
+    color: var(--color-primary);
+    background-color: var(--color-white);
+    cursor: pointer;
+  }
+
+  &-iconOpen {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    div {
+      width: 18px;
+      height: 1px;
+      background-color: var(--color-primary);
+    }
+  }
+
+  &-iconClose, &-textClose {
+    display: none;
+  }
+
+  &-iconClose {
+    div {
+      position: absolute;
+      width: 13px;
+      height: 1px;
+      background-color: var(--color-primary);
+
+      &:first-child {
+        transform: rotate(45deg);
+      }
+
+      &:last-child {
+        transform: rotate(135deg);
+      }
+    }
+  }
+
+  &-tel {
+    padding: 26px;
+    background-color: var(--color-secondary);
+
+    svg {
+      path {
+        fill: var(--color-white);
+      }
+    }
+  }
+
+  &-menu {
+    display: none;
+    background-color: var(--color-white);
+  }
+
+  &-item {
+    font-size: var(--button-size);
+    font-weight: 600;
+    line-height: var(--button-line-height);
+    letter-spacing: var(--button-letter-spacing);
+    text-transform: uppercase;
+
+    a {
+      display: flex;
+      justify-content: center;
+      padding: 30px;
+      color: var(--color-primary);
+    }
+  }
+
+  &-footer {
+    display: none;
+    border-top: 1px solid var(--color-beige-light);
+
+    a {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding: 26px;
+      font-size: var(--button-size);
+      font-weight: 600;
+      line-height: var(--button-line-height);
+      text-transform: uppercase;
+      letter-spacing: var(--button-letter-spacing);
+      color: var(--color-primary);
+      background-color: var(--color-white);
+
+      &:first-child {
+        flex: 1;
+        border-right: 1px solid var(--color-beige-light);
+      }
+    }
+
+    svg {
+      path {
+        fill: var(--color-primary);
+      }
+    }
+  }
+
+  &.isOpen {
+    .MenuMobile {
+      width: 100%;
+
+      &-icon {
+        display: flex;
+      }
+
+      &-iconClose, &-textClose {
+        display: flex;
+      }
+
+      &-iconOpen, &-textOpen {
+        display: none;
+      }
+
+      &-menu {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &-footer {
+        display: flex;
+      }
+    }
+  }
+}

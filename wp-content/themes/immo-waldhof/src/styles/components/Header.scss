@@ -1,0 +1,33 @@
+.Header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  &-content {
+    position: fixed;
+    top: 0;
+  }
+
+  &-logo {
+    display: flex;
+    padding: 54px 36px 64px 36px;
+    background-color: var(--color-tertiary);
+
+    img {
+      width: 161px;
+    }
+  }
+
+
+  &.openMenu {
+    .Header {
+      &-logo {
+        display: none;
+      }
+
+      &-content {
+        width: 100%;
+      }
+    }
+  }
+}
