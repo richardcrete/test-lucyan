@@ -5,13 +5,11 @@ export default class MenuMobile {
     public static searchForm: HTMLDivElement | null = document.querySelector(".SearchForm");
 
     public static init(): void {
+        this.checkScroll();
+
         if (this.searchForm) {
             window.addEventListener("scroll", () => {
-                if (this.searchForm && this.searchForm.getBoundingClientRect().top < 100) {
-                    this.addClasses();
-                } else {
-                    this.removeClasses();
-                }
+                this.checkScroll();
             });
         }
 
@@ -26,6 +24,14 @@ export default class MenuMobile {
                 this.removeClasses();
             });
         });
+    }
+
+    public static checkScroll(): void {
+        if (this.searchForm && this.searchForm.getBoundingClientRect().top < 100) {
+            this.addClasses();
+        } else {
+            this.removeClasses();
+        }
     }
 
     public static addClasses(): void {
