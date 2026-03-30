@@ -15,6 +15,7 @@ echo HomeSlider::getHomeSlider(
 
 <?php
 echo SearchForm::getSearchForm(3);
+echo Spacer::getSpacer();
 ?>
 
 </main>

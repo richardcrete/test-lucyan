@@ -1,0 +1,8 @@
+.Spacer {
+  width: 100%;
+  height: 100px;
+
+  @media(min-width: 1024px) {
+    height: 150px;
+  }
+}
