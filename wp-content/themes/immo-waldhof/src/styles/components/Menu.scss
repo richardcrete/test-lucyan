@@ -16,6 +16,7 @@
     display: flex;
     align-items: center;
     gap: 30px;
+    flex: 0 0 530px;
   }
 
   &-secondary {
@@ -51,6 +52,7 @@
     display: flex;
     opacity: 0;
     transition: var(--animation-transition);
+    flex: 0 1 auto;
 
     img {
       width: 148px;
