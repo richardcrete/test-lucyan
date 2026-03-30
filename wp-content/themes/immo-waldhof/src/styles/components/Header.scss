@@ -44,6 +44,7 @@
     .Header {
       &-logo {
         animation: disappear var(--animation-transition) forwards;
+        display: none;
       }
     }
   }

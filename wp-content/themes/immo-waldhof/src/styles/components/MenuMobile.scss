@@ -20,6 +20,7 @@
   }
 
   &-burger {
+    min-width: 164px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -155,6 +156,15 @@
 
       &-footer {
         display: flex;
+      }
+    }
+  }
+
+  &.isScrolled {
+    .MenuMobile {
+      &-icon {
+        display: flex;
+        animation: appear var(--animation-transition) forwards;
       }
     }
   }

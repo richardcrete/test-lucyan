@@ -47,8 +47,4 @@ export default class MenuMobile {
             this.header.classList.remove("isScrolled");
         }
     }
-
-    public static isScrolled(): boolean {
-        return window.scrollY > 0;
-    }
 }
