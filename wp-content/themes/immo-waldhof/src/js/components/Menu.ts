@@ -8,7 +8,6 @@ export default class MenuMobile {
         if (this.searchForm) {
             window.addEventListener("scroll", () => {
                 if (this.searchForm && this.searchForm.getBoundingClientRect().top < 100) {
-                    console.log(this.searchForm.getBoundingClientRect().top);
                     this.addClasses();
                 } else {
                     this.removeClasses();
