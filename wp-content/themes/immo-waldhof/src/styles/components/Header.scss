@@ -13,8 +13,7 @@
     display: flex;
     padding: 54px 36px 64px 36px;
     background-color: var(--color-tertiary);
-    opacity: 1;
-    transition: var(--animation-transition);
+    animation: appear var(--animation-transition) forwards;
 
     @media (min-width: $minLg) {
       padding: 85px 41px 100px 41px;
@@ -44,7 +43,7 @@
   &.isScrolled {
     .Header {
       &-logo {
-        opacity: 0;
+        animation: disappear var(--animation-transition) forwards;
       }
     }
   }

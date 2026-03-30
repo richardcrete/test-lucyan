@@ -49,9 +49,7 @@
   }
 
   &-logo {
-    display: flex;
-    opacity: 0;
-    transition: var(--animation-transition);
+    animation: disappear var(--animation-transition) forwards;
     flex: 0 1 auto;
 
     img {
@@ -64,7 +62,7 @@
 
     .Menu {
       &-logo {
-        opacity: 1;
+        animation: appear var(--animation-transition) forwards;
       }
 
       &-item {

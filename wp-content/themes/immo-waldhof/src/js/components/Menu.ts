@@ -2,15 +2,19 @@ export default class MenuMobile {
     public static header: HTMLElement | null = document.querySelector(".Header");
     public static menu: HTMLMenuElement | null = document.querySelector(".Menu");
     public static menuItems: NodeListOf<HTMLLIElement> = document.querySelectorAll(".Menu-item");
+    public static searchForm: HTMLDivElement | null = document.querySelector(".SearchForm");
 
     public static init(): void {
-        window.addEventListener("scroll", (): void => {
-            if (this.isScrolled()) {
-                this.addClasses();
-            } else {
-                this.removeClasses();
-            }
-        });
+        if (this.searchForm) {
+            window.addEventListener("scroll", () => {
+                if (this.searchForm && this.searchForm.getBoundingClientRect().top < 100) {
+                    console.log(this.searchForm.getBoundingClientRect().top);
+                    this.addClasses();
+                } else {
+                    this.removeClasses();
+                }
+            });
+        }
 
         this.menuItems.forEach((menuItem: HTMLLIElement) => {
             menuItem.addEventListener("mouseenter", () => {
