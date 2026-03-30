@@ -17,5 +17,8 @@
     "typescript": "^6.0.2",
     "webpack": "^5.105.4",
     "webpack-cli": "^7.0.2"
+  },
+  "dependencies": {
+    "swiper": "^12.1.3"
   }
 }

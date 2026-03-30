@@ -2,7 +2,7 @@ body {
   font-family: var(--font-tertiary), sans-serif;
   font-size: var(--p-size);
   line-height: var(--p-line-height);
-  background-color: var(--background); // TODO
+  background-color: var(--color-beige-light);
   color: var(--text); // TODO
 
   &.openMenu {

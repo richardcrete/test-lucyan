@@ -1,4 +1,5 @@
 <?php
 
-include_once('components/header.php');
-include_once('components/footer.php');
+include_once('components/Header.php');
+include_once('components/HomeSlider.php');
+include_once('components/Footer.php');
