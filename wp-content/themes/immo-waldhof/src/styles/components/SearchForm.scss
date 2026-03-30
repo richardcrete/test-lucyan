@@ -1,0 +1,174 @@
+.SearchForm {
+  position: relative;
+  margin-top: -60px;
+  z-index: 1;
+
+  &-container {
+    @media (min-width: $minLg) {
+      width: 752px;
+    }
+  }
+
+  &-type {
+    display: flex;
+
+    label {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 23px;
+      font-size: var(--button-size);
+      font-weight: var(--button-weight);
+      line-height: var(--button-line-height);
+      text-transform: uppercase;
+      letter-spacing: var(--button-letter-spacing);
+      background-color: var(--color-tertiary);
+      color: var(--color-white);
+      cursor: pointer;
+
+      &:first-of-type {
+        border-top-left-radius: 3px;
+      }
+
+      &:last-of-type {
+        border-top-right-radius: 3px;
+      }
+    }
+
+    input {
+      display: none;
+
+      &:checked + label {
+        background-color: var(--color-white);
+        color: var(--color-tertiary);
+      }
+    }
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px 20px 25px 20px;
+    background-color: var(--color-white);
+    color: var(--color-tertiary);
+
+    @media (min-width: $minLg) {
+      padding: 23px 44px 44px 44px;
+    }
+  }
+
+  &-fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    @media (min-width: $minLg) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &-input {
+    padding: 7px 13px;
+    border: 1px solid var(--color-grey-light);
+    border-radius: 4px;
+  }
+
+  &-hasUnit {
+    position: relative;
+
+    input {
+      width: 100%;
+      padding: 7px 49px 7px 13px;
+    }
+  }
+
+  &-unit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 7px 13px;
+    border-left: 1px solid var(--color-grey-light);
+  }
+
+  &-radios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 23px;
+
+    @media (min-width: $minLg) {
+      gap: 20px 47px;
+    }
+
+    label {
+      display: flex;
+      gap: 10px;
+      cursor: pointer;
+    }
+
+    input {
+      display: none;
+
+      &:checked + label {
+        .SearchForm-radio {
+          div {
+            width: 17px;
+            height: 17px;
+            background-color: #02496E;
+          }
+        }
+      }
+    }
+
+    &.hasNoLabel {
+      gap: 8px;
+
+      label {
+        justify-content: center;
+        align-items: center;
+        padding: 8px 14px;
+        border: 1px solid var(--color-grey-light);
+
+      }
+
+      input {
+        &:checked + label {
+          background-color: #02496E;
+          color: var(--color-white);
+        }
+      }
+    }
+  }
+
+  &-radio {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--color-grey-light);
+    border-radius: 3px;
+  }
+
+  &-submit {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-grey);
+
+    @media (min-width: $minLg) {
+      flex-direction: row;
+      justify-content: right;
+      gap: 30px;
+    }
+  }
+}

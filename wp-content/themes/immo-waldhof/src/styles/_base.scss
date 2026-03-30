@@ -42,12 +42,19 @@ a {
 
 .h4 {
   font-size: var(--h4-size);
+  font-family: var(--font-secondary), sans-serif;
+  line-height: var(--h4-line-height);
+  letter-spacing: var(--h4-letter-spacing);
 }
 
 .h5 {
   font-size: var(--h5-size);
+  font-family: var(--font-secondary), sans-serif;
 }
 
 .h6 {
   font-size: var(--h6-size);
+  font-family: var(--font-secondary), sans-serif;
+  line-height: var(--h6-line-height);
+  letter-spacing: var(--h6-letter-spacing);
 }

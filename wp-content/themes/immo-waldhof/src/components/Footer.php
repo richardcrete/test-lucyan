@@ -23,7 +23,7 @@ class Footer
                                 </div>
                             </div>
                             <div class="Footer-buttons">
-                                <a href="#" class="Button isBorderRadius isSecondaryLight">
+                                <a href="#" class="Button isBorderRadius isMedium isSecondaryLight">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20.238" height="20.238" viewBox="0 0 20.238 20.238">
                                         <g id="icone-itineraire" transform="translate(0 0.001)">
                                             <g id="directions" transform="translate(0 -0.001)">
@@ -33,7 +33,7 @@ class Footer
                                     </svg>
                                     Voir l\'itinéraire
                                 </a>
-                                <a href="mailto:agence@immo-waldhof.fr" class="Button isBorderRadius isSecondaryLight">
+                                <a href="mailto:agence@immo-waldhof.fr" class="Button isMedium isBorderRadius isSecondaryLight">
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="13" viewBox="0 0 17 13">
                                         <defs>
                                             <clipPath id="clip-path">
@@ -49,7 +49,7 @@ class Footer
                                     </svg>
                                     agence@immo-waldhof.fr
                                 </a>
-                                <a href="tel:+33 3 88 59 26 50" class="Button isBorderRadius isSecondaryLight">
+                                <a href="tel:+33 3 88 59 26 50" class="Button isMedium isBorderRadius isSecondaryLight">
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15.559" height="15.561" viewBox="0 0 15.559 15.561">
                                         <defs>
                                             <clipPath id="clip-path">
