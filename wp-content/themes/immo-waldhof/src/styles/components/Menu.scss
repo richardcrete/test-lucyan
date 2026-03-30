@@ -50,6 +50,7 @@
 
   &-logo {
     animation: disappear var(--animation-transition) forwards;
+    display: none;
     flex: 0 1 auto;
 
     img {
@@ -63,6 +64,7 @@
     .Menu {
       &-logo {
         animation: appear var(--animation-transition) forwards;
+        display: flex;
       }
 
       &-item {
