@@ -10,10 +10,7 @@
     background-color: var(--color-secondary);
 
     @media (min-width: $minLg) {
-      flex-direction: row;
-      justify-content: space-between;
-      gap: unset;
-      padding: 45px 68px 45px 74px;
+      padding: 200px 260px;
     }
   }
 
