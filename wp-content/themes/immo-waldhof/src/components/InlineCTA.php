@@ -2,14 +2,14 @@
 
 class InlineCTA
 {
-    public static function getInlineCTA(): string
+    public static function getInlineCTA(bool $isLight = false): string
     {
         return '
-            <div class="InlineCTA component isLight">
+            <div class="InlineCTA isComponent' . ($isLight ? ' isLight' : '') . '">
                 <div class="container">
                 <div class="InlineCTA-content">
                     <h3 class="h3">Je souhaite être informé par mail dès qu’un bien est mis en ligne</h3>
-                    <a href="#" class="Button isSecondary isSmall">
+                    <a href="#" class="Button isSecondary isSmall isBorderRadius">
                         <svg id="icone-cloche" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14.241" height="17.089" viewBox="0 0 14.241 17.089">
                             <defs>
                                 <clipPath id="clip-path">

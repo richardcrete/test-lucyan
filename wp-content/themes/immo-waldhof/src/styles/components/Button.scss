@@ -56,4 +56,15 @@
       }
     }
   }
+
+  &.isTertiary {
+    color: var(--color-beige-light);
+    background-color: var(--color-tertiary);
+
+    svg {
+      path {
+        fill: var(--color-beige-light);
+      }
+    }
+  }
 }

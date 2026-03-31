@@ -48,10 +48,16 @@ echo Properties::getProperties(
 );
 echo Spacer::getSpacer();
 echo Spacer::getSpacer();
+echo Spacer::getSpacer();
 
+echo BigCTA::getBigCTA(true, true);
+echo Spacer::getSpacer(true);
+echo Spacer::getSpacer(true);
 echo Spacer::getSpacer(true);
 
-echo InlineCTA::getInlineCTA();
+echo InlineCTA::getInlineCTA(true);
+echo Spacer::getSpacer(true);
+
 ?>
 
 </main>

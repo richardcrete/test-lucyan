@@ -1,0 +1,27 @@
+.BigCTA {
+  &-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 100px 27px;
+    text-align: center;
+    color: var(--color-beige-dark);
+    background-color: var(--color-secondary);
+
+    @media (min-width: $minLg) {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: unset;
+      padding: 45px 68px 45px 74px;
+    }
+  }
+
+  &.isHigher {
+    height: 0;
+
+    .BigCTA-content {
+      transform: translateY(-50%);
+    }
+  }
+}
