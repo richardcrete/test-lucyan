@@ -65,6 +65,8 @@ a {
 .h5 {
   font-size: var(--h5-size);
   font-family: var(--font-secondary), sans-serif;
+  line-height: var(--h5-line-height);
+  letter-spacing: var(--h5-letter-spacing);
 }
 
 .h6 {

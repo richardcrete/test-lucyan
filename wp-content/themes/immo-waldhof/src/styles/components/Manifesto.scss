@@ -1,0 +1,209 @@
+.Manifesto {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+
+
+  &-header {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    color: var(--color-beige-dark);
+
+    @media(min-width: $minLg) {
+      max-width: 900px;
+    }
+  }
+
+  &-row {
+    @media(min-width: $minLg) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    gap: 45px;
+
+    @media(min-width: $minLg) {
+      max-width: 550px;
+    }
+  }
+
+  &-link {
+    @media(min-width: $minLg) {
+      max-width: 550px;
+    }
+  }
+
+  &-logo {
+    display: none;
+
+    @media(min-width: $minLg) {
+      display: flex;
+    }
+
+    &.isMobile {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      @media(min-width: $minLg) {
+        display: none;
+      }
+    }
+
+    img {
+      width: 102px;
+    }
+  }
+
+  &-gallery {
+    width: 100%;
+    display: none;
+    gap: 15px;
+
+    @media(min-width: $minLg) {
+      display: flex;
+    }
+
+    &.isMobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+      @media(min-width: $minLg) {
+        display: none;
+      }
+    }
+  }
+
+  &-item {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+
+    img {
+      border-radius: 3px;
+    }
+
+    &.isAlignRight {
+      justify-content: right;
+
+      .Manifesto-box {
+        justify-content: right;
+        padding-right: 20px;
+      }
+    }
+
+    &.isAlignLeft {
+      justify-content: left;
+
+      .Manifesto-box {
+        justify-content: left;
+        padding-left: 20px;
+      }
+    }
+
+    #Manifesto-img-1 {
+      height: 403px;
+    }
+
+    #Manifesto-img-2 {
+      height: 236px;
+    }
+
+    #Manifesto-img-3 {
+      height: 372px;
+      margin-bottom: 34px;
+    }
+
+    #Manifesto-img-4 {
+      height: 237px;
+    }
+
+    #Manifesto-img-5 {
+      height: 277px;
+    }
+
+    #Manifesto-img-6 {
+      height: 498px;
+    }
+
+    #Manifesto-img-7 {
+      height: 418px;
+    }
+
+    #Manifesto-img-8 {
+      height: 274px;
+
+      + .Manifesto-card {
+        margin-top: 70px;
+      }
+    }
+
+    #Manifesto-img-9 {
+      height: 418px;
+    }
+  }
+
+  &-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 10px;
+
+    @media(min-width: $minLg) {
+      flex-direction: column;
+      align-items: start;
+      gap: 15px;
+    }
+
+    &.isRow {
+      flex-direction: row;
+      gap: 15px;
+    }
+  }
+
+  &-card {
+    min-width: 277px;
+    width: 277px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 28px;
+    border-radius: 3px;
+    background-color: var(--color-white);
+
+    @media(min-width: $minLg) {
+      width: 321px;
+      padding: 80px 50px 85px 50px;
+    }
+  }
+
+  &-content {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    text-align: center;
+
+    h5 {
+      max-width: 150px;
+      color: var(--color-primary)
+    }
+  }
+
+  @media(min-width: $minLg) {
+    gap: 27px;
+  }
+}

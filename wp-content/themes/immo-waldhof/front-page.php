@@ -58,6 +58,9 @@ echo Spacer::getSpacer(true);
 echo InlineCTA::getInlineCTA(true);
 echo Spacer::getSpacer(true);
 
+echo Manifesto::getManifesto(true);
+echo Spacer::getSpacer(true);
+
 ?>
 
 </main>

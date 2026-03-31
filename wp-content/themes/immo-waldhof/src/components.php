@@ -9,3 +9,4 @@ include_once('components/Properties.php');
 include_once('components/Footer.php');
 include_once('components/InlineCTA.php');
 include_once('components/BigCTA.php');
+include_once('components/Manifesto.php');
