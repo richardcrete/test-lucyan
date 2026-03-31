@@ -7,7 +7,7 @@ class HomeSlider
         $html = '
             <div class="HomeSlider">
                 <div class="HomeSlider-gradient"></div>
-                <div class="HomeSlider-container isLoop swiper" data-autoplay-delay="2000">
+                <div class="HomeSlider-container isLoop swiper" data-autoplay="2000">
                     <div class="HomeSlider-wrapper swiper-wrapper">';
 
             foreach ($images as $image) {

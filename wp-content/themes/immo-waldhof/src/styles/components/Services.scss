@@ -26,7 +26,6 @@
 
   &-subTitle {
     text-align: center;
-    color: var(--color-grey);
 
     @media(min-width: $minLg) {
       margin-top: 10px;
@@ -79,7 +78,6 @@
   &-description {
     display: none;
     margin-top: 15px;
-    color: var(--color-grey);
 
     @media(min-width: $minLg) {
       margin-top: 0;

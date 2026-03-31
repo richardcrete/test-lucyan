@@ -1,9 +1,14 @@
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: var(--font-tertiary), sans-serif;
   font-size: var(--p-size);
   line-height: var(--p-line-height);
   background-color: var(--color-beige-light);
-  color: var(--text); // TODO
+  color: var(--color-grey);
+  overflow-x: hidden;
 
   &.openMenu {
     overflow-y: hidden;
