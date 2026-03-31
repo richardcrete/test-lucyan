@@ -7,3 +7,4 @@ include_once('components/Spacer.php');
 include_once('components/Services.php');
 include_once('components/Properties.php');
 include_once('components/Footer.php');
+include_once('components/InlineCTA.php');

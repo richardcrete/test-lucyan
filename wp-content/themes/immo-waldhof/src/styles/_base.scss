@@ -26,6 +26,12 @@ body {
   }
 }
 
+.component {
+  &.isLight {
+    background-color: var(--color-tertiary);
+  }
+}
+
 a {
   text-decoration: none;
 }

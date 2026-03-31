@@ -27,16 +27,28 @@
   &.isPrimaryLight {
     color: var(--color-primary);
     background-color: var(--color-white);
+
+    svg {
+      path {
+        fill: var(--color-primary);
+      }
+    }
   }
 
   &.isSecondary {
-    background-color: var(--color-secondary);
     color: var(--color-beige-light);
+    background-color: var(--color-secondary);
+
+    svg {
+      path {
+        fill: var(--color-beige-light);
+      }
+    }
   }
 
   &.isSecondaryLight {
-    background-color: var(--color-white);
     color: var(--color-secondary);
+    background-color: var(--color-white);
 
     svg {
       path {

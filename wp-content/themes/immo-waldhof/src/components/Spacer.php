@@ -2,10 +2,10 @@
 
 class Spacer
 {
-    public static function getSpacer(): string
+    public static function getSpacer(bool $isLight = false): string
     {
         return '
-            <div class="Spacer"></div>
+            <div class="Spacer component' . ($isLight ? ' isLight' : '') . '"></div>
         ';
     }
 }

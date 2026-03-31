@@ -47,6 +47,11 @@ echo Properties::getProperties(
         ]
 );
 echo Spacer::getSpacer();
+echo Spacer::getSpacer();
+
+echo Spacer::getSpacer(true);
+
+echo InlineCTA::getInlineCTA();
 ?>
 
 </main>
