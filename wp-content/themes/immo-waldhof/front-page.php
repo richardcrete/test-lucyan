@@ -61,6 +61,8 @@ echo Spacer::getSpacer(true);
 echo Manifesto::getManifesto(true);
 echo Spacer::getSpacer(true);
 
+echo Reviews::getReviews(true);
+echo Spacer::getSpacer(true);
 ?>
 
 </main>

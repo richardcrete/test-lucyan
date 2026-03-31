@@ -1,0 +1,184 @@
+.Reviews {
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: 57px;
+    padding: 45px 28px;
+    background-color: var(--color-white);
+
+    @media (min-width: $minLg) {
+      padding: 45px 200px;
+      gap: 45px;
+    }
+  }
+
+  &-header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+
+    @media (min-width: $minLg) {
+      gap: 10px;
+    }
+  }
+
+  &-title {
+    color: var(--color-primary);
+  }
+
+  &-description {
+    @media (min-width: $minLg) {
+      padding: 0 90px;
+    }
+  }
+
+  &-reviews {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+
+    @media (min-width: $minLg) {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &-logo {
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 129px;
+    }
+  }
+
+  &-stars {
+    margin: 9px 0 18px 0;
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+
+    svg {
+      width: 18px;
+      height: 17px;
+
+      path {
+        fill: #DBA605;
+      }
+    }
+
+    &.isRating {
+      justify-content: left;
+      gap: 2px;
+
+      svg {
+        width: 12px;
+        height: 11px;
+      }
+    }
+  }
+
+  &-total {
+    font-size: 13px;
+    line-height: 23px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @media (min-width: $minLg) {
+      flex-direction: row;
+    }
+  }
+
+  &-item {
+    height: fit-content;
+    padding: 25px 16px 25px 21px;
+    background-color: var(--color-beige-light);
+
+    &.isOpen {
+      .Reviews {
+        &-text {
+          overflow: visible;
+          display: block;
+          -webkit-line-clamp: unset;
+          line-clamp: unset;
+          -webkit-box-orient: unset;
+        }
+
+        &-more {
+          .Reviews {
+            &-textOpen {
+              display: none;
+            }
+
+            &-textClose {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-user {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    img {
+      border-radius: 25px;
+    }
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+
+    span {
+      font-size: 13px;
+      line-height: 23px;
+    }
+  }
+
+  &-name {
+    font-size: var(--button-size);
+    font-weight: var(--button-weight);
+    line-height: var(--button-line-height);
+    text-transform: uppercase;
+    color: var(--color-tertiary);
+  }
+
+  &-text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+
+  &-more {
+    margin-top: 13px;
+    font-size: 15px;
+    line-height: 16px;
+    letter-spacing: 0.75px;
+    color: var(--color-tertiary);
+    background-color: transparent;
+    cursor: pointer;
+
+    .Reviews {
+      &-textOpen {
+        display: block;
+      }
+
+      &-textClose {
+        display: none;
+      }
+    }
+  }
+}
