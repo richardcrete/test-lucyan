@@ -197,9 +197,13 @@
     gap: 5px;
     text-align: center;
 
-    h5 {
+    .h5 {
       max-width: 150px;
-      color: var(--color-primary)
+      color: var(--color-primary);
+
+      @media(min-width: $minLg) {
+        max-width: unset;
+      }
     }
   }
 
