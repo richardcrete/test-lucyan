@@ -16,6 +16,25 @@ echo HomeSlider::getHomeSlider(
 <?php
 echo SearchForm::getSearchForm(3);
 echo Spacer::getSpacer();
+echo Services::getServices(
+    [
+        [
+            "title" => "Estimez",
+            "description" => "Lorem ipsum dolor sit amet, consectetur dipiscing elit. Aenean vitae congue arcu. hasellus llamcorper purus enim, non mollis libero facilisis vitae. Donec risus nulla.",
+            "link" => "#",
+        ],
+        [
+                "title" => "Vendez",
+                "description" => "Lorem ipsum dolor sit amet, consectetur dipiscing elit. Aenean vitae congue arcu. hasellus llamcorper purus enim, non mollis libero facilisis vitae. Donec risus nulla.",
+                "link" => "#",
+        ],
+        [
+                "title" => "Louer",
+                "description" => "Lorem ipsum dolor sit amet, consectetur dipiscing elit. Aenean vitae congue arcu. hasellus llamcorper purus enim, non mollis libero facilisis vitae. Donec risus nulla.",
+                "link" => "#",
+        ],
+    ]
+);
 ?>
 
 </main>

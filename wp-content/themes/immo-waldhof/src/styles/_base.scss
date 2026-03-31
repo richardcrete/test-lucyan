@@ -28,16 +28,20 @@ a {
 .h1 {
   font-size: var(--h1-size);
   font-family: var(--font-primary), serif;
+  line-height: var(--h1-line-height);
 }
 
 .h2 {
   font-size: var(--h2-size);
   font-family: var(--font-secondary), sans-serif;
+  line-height: var(--h2-line-height);
 }
 
 .h3 {
   font-size: var(--h3-size);
   font-family: var(--font-secondary), sans-serif;
+  line-height: var(--h3-line-height);
+  letter-spacing: var(--h3-letter-spacing);
 }
 
 .h4 {
