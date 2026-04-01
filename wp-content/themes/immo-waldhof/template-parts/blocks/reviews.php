@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Testimonial Block Template.
+ * Reviews Block Template.
  *
  * @param   array $block The block settings and attributes.
  * @param   string $content The block inner HTML (empty).
