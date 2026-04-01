@@ -30,6 +30,19 @@ function register_acf_blocks(): void
     ]);
 
     acf_register_block_type([
+        'name' => 'services',
+        'title' => 'Services',
+        'description' => 'Services',
+        'icon' => array(
+            'background' => '#fff',
+            'foreground' => '#000',
+            'src' => 'admin-tools',
+        ),
+        'render_template' => get_template_directory() . '/template-parts/blocks/services.php',
+        'enqueue_script' => get_template_directory_uri() . '/dist/app.js',
+    ]);
+
+    acf_register_block_type([
         'name' => 'spacer',
         'title' => 'Spacer',
         'description' => 'Spacer',
