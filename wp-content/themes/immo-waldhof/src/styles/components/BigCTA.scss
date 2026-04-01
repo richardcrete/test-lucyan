@@ -13,12 +13,4 @@
       padding: 200px 260px;
     }
   }
-
-  &.isHigher {
-    height: 0;
-
-    .BigCTA-content {
-      transform: translateY(-50%);
-    }
-  }
 }
