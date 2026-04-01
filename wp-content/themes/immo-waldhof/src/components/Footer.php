@@ -4,7 +4,12 @@ class Footer
 {
     public static function getFooter(): string
     {
-        return '
+        $buttons = get_field('buttons', 'options');
+        $primaryUsefulLinks = get_field('primary_useful_links', 'options');
+        $secondaryUsefulLinks = get_field('secondary_useful_links', 'options');
+        $footLinks = get_field('foot_links', 'options');
+
+        $html = '
             <footer class="Footer">
                 <div class="container">
                     <div class="Footer-logo">
@@ -16,14 +21,14 @@ class Footer
                         <div class="Footer-left">
                             <div class="Footer-contact">
                                 <div class="Footer-address">
-                                    Immobilière du waldhof<br>28 faubourg du Capitaine d’Alençon<br>67610 LA WANTZENAU
+                                    ' . get_field('address', 'options') . '
                                 </div>
                                 <div class="Footer-facebook">
-                                    Suivez-nous sur <a href="https://www.facebook.com/immobiliereduwaldhof/">Facebook</a>
+                                    Suivez-nous sur <a href="' . get_field('facebook_link', 'options')['url'] . '" target="' . get_field('facebook_link', 'options')['target'] . '">Facebook</a>
                                 </div>
                             </div>
                             <div class="Footer-buttons">
-                                <a href="#" class="Button isBorderRadius isMedium isSecondaryLight">
+                                <a href="' . $buttons["route"]["url"] . '" target="' . $buttons["route"]["target"] . '" class="Button isBorderRadius isMedium isSecondaryLight">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20.238" height="20.238" viewBox="0 0 20.238 20.238">
                                         <g id="icone-itineraire" transform="translate(0 0.001)">
                                             <g id="directions" transform="translate(0 -0.001)">
@@ -31,9 +36,9 @@ class Footer
                                             </g>
                                         </g>
                                     </svg>
-                                    Voir l\'itinéraire
+                                    ' . $buttons["route"]["title"] . '
                                 </a>
-                                <a href="mailto:agence@immo-waldhof.fr" class="Button isMedium isBorderRadius isSecondaryLight">
+                                <a href="' . $buttons["email_address"]["url"] . '" target="' . $buttons["email_address"]["target"] . '" class="Button isMedium isBorderRadius isSecondaryLight">
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="13" viewBox="0 0 17 13">
                                         <defs>
                                             <clipPath id="clip-path">
@@ -47,9 +52,9 @@ class Footer
                                             </g>
                                         </g>
                                     </svg>
-                                    agence@immo-waldhof.fr
+                                    ' . $buttons["email_address"]["title"] . '
                                 </a>
-                                <a href="tel:+33 3 88 59 26 50" class="Button isMedium isBorderRadius isSecondaryLight">
+                                <a href="' . $buttons["telephone"]["url"] . '" target="' . $buttons["telephone"]["target"] . '" class="Button isMedium isBorderRadius isSecondaryLight">
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15.559" height="15.561" viewBox="0 0 15.559 15.561">
                                         <defs>
                                             <clipPath id="clip-path">
@@ -62,35 +67,55 @@ class Footer
                                             </g>
                                         </g>
                                     </svg>
-                                    03 88 59 26 50
+                                    ' . $buttons["telephone"]["title"] . '
                                 </a>
                             </div>
                         </div>
                         <div class="Footer-right">
-                            <div class="Footer-usefulLinks">
-                                <a href="#">Acheter</a>
-                                <a href="#">Louer</a>
-                                <a href="#">Estimer</a>
-                            </div>
-                            <div class="Footer-row">
-                                    <div class="Footer-usefulLinks">
-                                        <a href="#">Acheter neuf à Strasbourg</a>
-                                        <a href="#">Acheter ancien à Strasbourg</a>
-                                        <a href="#">Acheter neuf à Gambsheim</a>
-                                    </div>
-                                    <div class="Footer-usefulLinks">
-                                        <a href="#">Acheter neuf à Kilstett</a>
-                                        <a href="#">Acheter ancien à Weyersheim</a>
-                                        <a href="#">Investir à La Wantzenau</a>
-                                    </div>
-                            </div>                            
-                        </div>
-                    </div>
-                    <div class="Footer-foot">
-                        <a href="#">Mentions légales</a>
-                        <a href="#">Politique de cookies</a>
-                        <a href="#">Nos honoraires</a>
-                        <a href="https://www.lucyan.fr" target="_blank" class="Footer-lucyan">
+        ';
+
+        if (count($primaryUsefulLinks) > 0) {
+            $html .= '<div class="Footer-usefulLinks">';
+
+            foreach ($primaryUsefulLinks as $primaryUsefulLink) {
+                $html .= '<a href="' . $primaryUsefulLink["link"]["url"] . '" target="' . $primaryUsefulLink["link"]["target"] . '">' . $primaryUsefulLink["link"]["title"] . '</a>';
+            }
+
+            $html .= '</div>';
+        }
+
+        if (count($secondaryUsefulLinks) > 0) {
+            $html .= '<div class="Footer-row">
+                        <div class="Footer-usefulLinks">';
+
+            $leftLinks = array_slice($secondaryUsefulLinks, 0, ceil(count($secondaryUsefulLinks) / 2));
+            foreach ($leftLinks as $leftLink) {
+                $html .= '<a href="' . $leftLink["link"]["url"] . '" target="' . $leftLink["link"]["target"] . '">' . $leftLink["link"]["title"] . '</a>';
+            }
+            $html .= '</div>';
+
+            $html .= '<div class="Footer-usefulLinks">';
+            $rightLinks = array_slice($secondaryUsefulLinks, ceil(count($secondaryUsefulLinks) / 2));
+            foreach ($rightLinks as $rightLink) {
+                $html .= '<a href="' . $rightLink["link"]["url"] . '" target="' . $rightLink["link"]["target"] . '">' . $rightLink["link"]["title"] . '</a>';
+            }
+
+            $html .= '</div>';
+        }
+
+        $html .= '</div>
+              </div>
+          </div>
+          <div class="Footer-foot">
+        ';
+
+        if (count($footLinks) > 0) {
+            foreach ($footLinks as $footLink) {
+                $html .= '<a href="' . $footLink["link"]["url"] . '" target="' . $footLink["link"]["target"] . '">' . $footLink["link"]["title"] . '</a>';
+            }
+        }
+
+        $html .= '<a href="https://www.lucyan.fr" target="_blank" class="Footer-lucyan">
                             <svg xmlns="http://www.w3.org/2000/svg" width="129.46" height="26" viewBox="0 0 129.46 26">
                                 <g transform="translate(-1245 -852)">
                                     <path d="M154.58,26V0h26V26Zm24.7-1.3V1.3h-2.768L168.26,13.14v6.076h-1.3V15l-6.76,9.7h19.08Zm-20.661,0,8.2-11.763-4.685-6.725h1.581l3.9,5.589L174.93,1.3H155.876V24.7h2.742Z" transform="translate(1090.42 852)" fill="currentColor"></path>
@@ -102,5 +127,7 @@ class Footer
                 </div>
             </footer>
         ';
+
+        return $html;
     }
 }
