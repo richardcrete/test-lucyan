@@ -43,6 +43,19 @@ function register_acf_blocks(): void
     ]);
 
     acf_register_block_type([
+        'name' => 'manifesto',
+        'title' => 'Manifesto',
+        'description' => 'Manifeste',
+        'icon' => array(
+            'background' => '#fff',
+            'foreground' => '#000',
+            'src' => 'learn-more',
+        ),
+        'render_template' => get_template_directory() . '/template-parts/blocks/manifesto.php',
+        'enqueue_script' => get_template_directory_uri() . '/dist/app.js',
+    ]);
+
+    acf_register_block_type([
         'name' => 'spacer',
         'title' => 'Spacer',
         'description' => 'Spacer',
