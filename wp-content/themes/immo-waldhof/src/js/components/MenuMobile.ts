@@ -20,7 +20,7 @@ export default class MenuMobile {
     }
 
     public static checkScroll(): boolean | null {
-        return (this.searchForm && this.searchForm.getBoundingClientRect().top < 100);
+        return (this.searchForm && this.searchForm.getBoundingClientRect().top < 350);
     }
 
     public static afterScroll(): void {
