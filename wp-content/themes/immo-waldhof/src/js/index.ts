@@ -9,3 +9,15 @@ MenuMobile.init();
 Slider.init();
 Services.init();
 Reviews.init();
+
+window.addEventListener("load", (): void => {
+    const loader: HTMLDivElement | null = document.querySelector(".Loader");
+    if (loader) {
+        loader.classList.add("isHidden");
+        loader.addEventListener('transitionend', (): void => {
+            loader.remove();
+            document.querySelector("html")?.removeAttribute("style");
+        });
+    }
+
+});
