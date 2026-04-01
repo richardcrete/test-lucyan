@@ -4,6 +4,19 @@ add_action('acf/init', 'register_acf_blocks');
 function register_acf_blocks(): void
 {
     acf_register_block_type([
+        'name' => 'spacer',
+        'title' => 'Spacer',
+        'description' => 'Spacer',
+        'icon' => array(
+            'background' => '#fff',
+            'foreground' => '#000',
+            'src' => 'plus',
+        ),
+        'render_template' => get_template_directory() . '/template-parts/blocks/spacer.php',
+        'enqueue_script' => get_template_directory_uri() . '/dist/app.js',
+    ]);
+
+    acf_register_block_type([
         'name' => 'big-cta',
         'title' => 'Big CTA',
         'description' => 'Gros CTA',
