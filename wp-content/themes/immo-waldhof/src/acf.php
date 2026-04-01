@@ -4,6 +4,19 @@ add_action('acf/init', 'register_acf_blocks');
 function register_acf_blocks(): void
 {
     acf_register_block_type([
+        'name' => 'home-slider',
+        'title' => 'Home Slider',
+        'description' => 'Home Slider',
+        'icon' => array(
+            'background' => '#fff',
+            'foreground' => '#000',
+            'src' => 'slides',
+        ),
+        'render_template' => get_template_directory() . '/template-parts/blocks/home-slider.php',
+        'enqueue_script' => get_template_directory_uri() . '/dist/app.js',
+    ]);
+
+    acf_register_block_type([
         'name' => 'spacer',
         'title' => 'Spacer',
         'description' => 'Spacer',
