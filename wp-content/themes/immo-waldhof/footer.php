@@ -2,7 +2,7 @@
 
 include('src/components.php');
 
-echo Footer::getFooter();
+include_once('src/components/footer.php');
 wp_footer();
 ?>
 
