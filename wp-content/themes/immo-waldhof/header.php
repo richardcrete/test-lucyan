@@ -9,7 +9,7 @@ include('src/components.php');
     <head>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <title><?= get_bloginfo('name') ?></title>
+        <title><?= get_the_title() . ' - ' . get_bloginfo('name') ?></title>
     </head>
 
     <body>
