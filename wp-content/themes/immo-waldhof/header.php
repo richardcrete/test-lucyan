@@ -1,18 +1,12 @@
-<?php
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title><?= get_the_title() . ' - ' . get_bloginfo('name') ?></title>
+</head>
 
-include('src/components.php');
-
-?>
-
-    <!doctype html>
-    <html lang="fr">
-    <head>
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <title><?= get_the_title() . ' - ' . get_bloginfo('name') ?></title>
-    </head>
-
-    <body>
+<body>
 
 <?php
 include('src/components/header.php');

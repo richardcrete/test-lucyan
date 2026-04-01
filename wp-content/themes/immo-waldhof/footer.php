@@ -1,7 +1,5 @@
 <?php
 
-include('src/components.php');
-
 include_once('src/components/footer.php');
 wp_footer();
 ?>
