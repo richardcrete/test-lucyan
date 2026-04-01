@@ -19,6 +19,9 @@
                 <h2 class="h1"><?= get_field('title') ?></h2>
             </div>
             <a href="<?= get_field('link')['url'] ?>" target="<?= get_field('link')['target'] ?>" class="Button isTertiary isMedium isBorderRadius">
+                <?php if (get_field('icon')) : ?>
+                    <img src="<?= get_field('icon')["url"] ?>" alt="">
+                <?php endif; ?>
                 <?= get_field('link')['title'] ?>
             </a>
         </div>
