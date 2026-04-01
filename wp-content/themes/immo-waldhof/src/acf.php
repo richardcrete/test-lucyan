@@ -17,6 +17,19 @@ function register_acf_blocks(): void
     ]);
 
     acf_register_block_type([
+        'name' => 'search-form',
+        'title' => 'Search Form',
+        'description' => 'Formulaire de recherche',
+        'icon' => array(
+            'background' => '#fff',
+            'foreground' => '#000',
+            'src' => 'forms',
+        ),
+        'render_template' => get_template_directory() . '/template-parts/blocks/search-form.php',
+        'enqueue_script' => get_template_directory_uri() . '/dist/app.js',
+    ]);
+
+    acf_register_block_type([
         'name' => 'spacer',
         'title' => 'Spacer',
         'description' => 'Spacer',
