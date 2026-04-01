@@ -3,7 +3,6 @@
 add_action('acf/init', 'register_acf_blocks');
 function register_acf_blocks(): void
 {
-    $adminScriptPath = get_template_directory_uri() . '/dist/admin.js';
 
     acf_register_block_type([
         'name' => 'home-slider',
@@ -15,7 +14,6 @@ function register_acf_blocks(): void
             'src' => 'slides',
         ),
         'render_template' => get_template_directory() . '/template-parts/blocks/home-slider.php',
-        'enqueue_script' => $adminScriptPath,
     ]);
 
     acf_register_block_type([
@@ -28,7 +26,6 @@ function register_acf_blocks(): void
             'src' => 'forms',
         ),
         'render_template' => get_template_directory() . '/template-parts/blocks/search-form.php',
-        'enqueue_script' => $adminScriptPath,
     ]);
 
     acf_register_block_type([
@@ -41,7 +38,6 @@ function register_acf_blocks(): void
             'src' => 'admin-tools',
         ),
         'render_template' => get_template_directory() . '/template-parts/blocks/services.php',
-        'enqueue_script' => $adminScriptPath,
     ]);
 
     acf_register_block_type([
@@ -54,7 +50,6 @@ function register_acf_blocks(): void
             'src' => 'home',
         ),
         'render_template' => get_template_directory() . '/template-parts/blocks/properties-slider.php',
-        'enqueue_script' => $adminScriptPath,
     ]);
 
     acf_register_block_type([
@@ -67,7 +62,6 @@ function register_acf_blocks(): void
             'src' => 'learn-more',
         ),
         'render_template' => get_template_directory() . '/template-parts/blocks/manifesto.php',
-        'enqueue_script' => $adminScriptPath,
     ]);
 
     acf_register_block_type([
@@ -80,7 +74,6 @@ function register_acf_blocks(): void
             'src' => 'plus',
         ),
         'render_template' => get_template_directory() . '/template-parts/blocks/spacer.php',
-        'enqueue_script' => $adminScriptPath,
     ]);
 
     acf_register_block_type([
@@ -93,7 +86,6 @@ function register_acf_blocks(): void
             'src' => 'megaphone',
         ),
         'render_template' => get_template_directory() . '/template-parts/blocks/big-cta.php',
-        'enqueue_script' => $adminScriptPath,
     ]);
 
     acf_register_block_type([
@@ -106,7 +98,6 @@ function register_acf_blocks(): void
             'src' => 'megaphone',
         ),
         'render_template' => get_template_directory() . '/template-parts/blocks/inline-cta.php',
-        'enqueue_script' => $adminScriptPath,
     ]);
 
     acf_register_block_type([
@@ -119,6 +110,11 @@ function register_acf_blocks(): void
             'src' => 'star-filled',
         ),
         'render_template' => get_template_directory() . '/template-parts/blocks/reviews.php',
-        'enqueue_script' => $adminScriptPath,
     ]);
+}
+
+add_action('acf/input/admin_enqueue_scripts', 'acf_admin_enqueue_scripts');
+function acf_admin_enqueue_scripts(): void
+{
+    wp_enqueue_script('admin', get_template_directory_uri() . '/dist/admin.js');
 }
