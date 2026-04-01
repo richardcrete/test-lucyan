@@ -15,4 +15,4 @@ include('src/components.php');
     <body>
 
 <?php
-echo Header::getHeader();
+include('src/components/header.php');

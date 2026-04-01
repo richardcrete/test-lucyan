@@ -19,13 +19,19 @@
     flex: 0 0 530px;
   }
 
+  &-primary {
+    .Button {
+      margin-right: 4px;
+    }
+  }
+
   &-secondary {
     display: flex;
     align-items: center;
     gap: 30px;
 
-    .Menu-item:first-child {
-      margin-right: -4px;
+    .Button {
+      margin-left: 4px;
     }
   }
 
@@ -43,6 +49,8 @@
     letter-spacing: var(--button-letter-spacing);
 
     a {
+      width: max-content;
+      display: flex;
       color: var(--color-beige-dark);
       transition: var(--animation-transition);
     }
