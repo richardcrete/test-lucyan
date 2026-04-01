@@ -43,6 +43,19 @@ function register_acf_blocks(): void
     ]);
 
     acf_register_block_type([
+        'name' => 'properties-slider',
+        'title' => 'Slider Biens',
+        'description' => 'Slider biens',
+        'icon' => array(
+            'background' => '#fff',
+            'foreground' => '#000',
+            'src' => 'home',
+        ),
+        'render_template' => get_template_directory() . '/template-parts/blocks/properties-slider.php',
+        'enqueue_script' => get_template_directory_uri() . '/dist/app.js',
+    ]);
+
+    acf_register_block_type([
         'name' => 'manifesto',
         'title' => 'Manifesto',
         'description' => 'Manifeste',

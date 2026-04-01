@@ -104,7 +104,9 @@
   }
 
   &-price {
+    font-size: var(--p-size);
     font-weight: var(--button-weight);
+    line-height: var(--p-line-height);
     color: var(--color-tertiary);
   }
 
