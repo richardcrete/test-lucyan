@@ -11,7 +11,7 @@
 
 ?>
 
-<?php $images = get_field('images'); ?>
+<?php $images = get_field('images') ?? []; ?>
 
 <div class="HomeSlider">
     <?php if (get_field('gradient')) : ?>
