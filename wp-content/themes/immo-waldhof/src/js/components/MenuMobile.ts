@@ -32,7 +32,8 @@ export default class MenuMobile {
     }
 
     public static toggleMenu(): void {
-        document.body.classList.toggle("openMenu");
+        document.querySelector("html")?.classList.toggle("openMenu");
+
         if (this.header) {
             this.header.classList.toggle("openMenu");
         }
