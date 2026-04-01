@@ -5,7 +5,9 @@ export default class MenuMobile {
     public static searchForm: HTMLDivElement | null = document.querySelector(".SearchForm");
 
     public static init(): void {
-        this.afterScroll();
+        if (window.innerWidth >= 769) {
+            this.afterScroll();
+        }
 
         if (this.searchForm && window.innerWidth >= 769) {
             window.addEventListener("scroll", (): void => {

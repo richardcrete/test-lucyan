@@ -5,21 +5,26 @@ export default class MenuMobile {
     public static searchForm: HTMLDivElement | null = document.querySelector(".SearchForm");
 
     public static init(): void {
-        this.checkScroll();
-
+        if (window.innerWidth < 769) {
+            this.afterScroll();
+        }
         this.menuMobileBurger?.addEventListener("click", (): void => {
             this.toggleMenu();
         });
 
-        if (this.searchForm && window.innerWidth < 769) {
+        if (window.innerWidth < 769) {
             window.addEventListener("scroll", (): void => {
-                this.checkScroll();
+                this.afterScroll();
             });
         }
     }
 
-    public static checkScroll(): void {
-        if (this.searchForm && this.searchForm.getBoundingClientRect().top < 115) {
+    public static checkScroll(): boolean | null {
+        return (this.searchForm && this.searchForm.getBoundingClientRect().top < 100);
+    }
+
+    public static afterScroll(): void {
+        if (this.checkScroll()) {
             this.addClasses();
         } else {
             this.removeClasses();
@@ -41,10 +46,19 @@ export default class MenuMobile {
         if (this.menuMobile) {
             this.menuMobile.classList.add("isScrolled");
         }
+
+        if (this.header) {
+            this.header.classList.add("isScrolled");
+        }
     }
 
     public static removeClasses(): void {
         if (this.menuMobile) {
             this.menuMobile.classList.remove("isScrolled");
         }
-    }}
+
+        if (this.header) {
+            this.header.classList.remove("isScrolled");
+        }
+    }
+}
