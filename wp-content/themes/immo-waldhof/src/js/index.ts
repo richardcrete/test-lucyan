@@ -19,5 +19,4 @@ window.addEventListener("load", (): void => {
             document.querySelector("html")?.removeAttribute("style");
         });
     }
-
 });
