@@ -11,7 +11,7 @@ export default class MenuMobile {
             this.toggleMenu();
         });
 
-        if (this.searchForm) {
+        if (this.searchForm && window.innerWidth < 769) {
             window.addEventListener("scroll", (): void => {
                 this.checkScroll();
             });

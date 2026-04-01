@@ -7,7 +7,7 @@ export default class MenuMobile {
     public static init(): void {
         this.afterScroll();
 
-        if (this.searchForm) {
+        if (this.searchForm && window.innerWidth >= 769) {
             window.addEventListener("scroll", (): void => {
                 this.afterScroll();
             });

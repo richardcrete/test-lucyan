@@ -13,10 +13,10 @@
     display: flex;
     padding: 54px 36px 64px 36px;
     background-color: var(--color-tertiary);
-    animation: appear var(--animation-transition) forwards;
 
     @media (min-width: $minLg) {
       padding: 85px 41px 100px 41px;
+      animation: appear var(--animation-transition) forwards;
     }
 
     img {
@@ -43,7 +43,6 @@
   &.isScrolled {
     .Header {
       &-logo {
-        animation: disappear var(--animation-transition) forwards;
         display: none;
       }
     }

@@ -57,7 +57,6 @@
   }
 
   &-logo {
-    animation: disappear var(--animation-transition) forwards;
     display: none;
     flex: 0 1 auto;
 
@@ -71,7 +70,6 @@
 
     .Menu {
       &-logo {
-        animation: appear var(--animation-transition) forwards;
         display: flex;
       }
 
