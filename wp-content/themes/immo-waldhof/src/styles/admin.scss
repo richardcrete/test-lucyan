@@ -1,0 +1,20 @@
+// Base
+@import '_variables';
+@import 'admin/_reset';
+@import 'admin/_base';
+@import '_animations';
+
+// Components
+@import 'components/HomeSlider';
+@import 'components/SearchForm';
+@import 'components/Spacer';
+@import 'components/Services';
+@import 'components/Properties';
+@import 'components/Reviews';
+@import 'components/Button';
+@import 'components/InlineCTA';
+@import 'components/BigCTA';
+@import 'components/Manifesto';
+
+// Dependencies
+@import 'swiper/css';

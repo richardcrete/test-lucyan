@@ -1,0 +1,67 @@
+.container {
+  padding: 0 20px;
+  width: auto;
+
+  @media (min-width: $minLg) {
+    max-width: 1400px;
+    margin: auto;
+  }
+}
+
+.isComponent {
+  &.isLight {
+    background-color: var(--color-tertiary);
+  }
+
+  &.isHigher {
+    height: 0;
+
+    .container > *:first-child {
+      transform: translateY(-50%);
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.h1 {
+  font-size: var(--h1-size);
+  font-family: var(--font-primary), serif;
+  line-height: var(--h1-line-height);
+}
+
+.h2 {
+  font-size: var(--h2-size);
+  font-family: var(--font-secondary), sans-serif;
+  line-height: var(--h2-line-height);
+}
+
+.h3 {
+  font-size: var(--h3-size);
+  font-family: var(--font-secondary), sans-serif;
+  line-height: var(--h3-line-height);
+  letter-spacing: var(--h3-letter-spacing);
+}
+
+.h4 {
+  font-size: var(--h4-size);
+  font-family: var(--font-secondary), sans-serif;
+  line-height: var(--h4-line-height);
+  letter-spacing: var(--h4-letter-spacing);
+}
+
+.h5 {
+  font-size: var(--h5-size);
+  font-family: var(--font-secondary), sans-serif;
+  line-height: var(--h5-line-height);
+  letter-spacing: var(--h5-letter-spacing);
+}
+
+.h6 {
+  font-size: var(--h6-size);
+  font-family: var(--font-secondary), sans-serif;
+  line-height: var(--h6-line-height);
+  letter-spacing: var(--h6-letter-spacing);
+}

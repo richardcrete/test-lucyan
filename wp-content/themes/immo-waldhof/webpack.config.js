@@ -11,6 +11,7 @@ const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader
 const config = {
     entry: {
         app: './src/app.js',
+        admin: './src/admin.js'
     },
     output: {
         asyncChunks: false,
