@@ -6,7 +6,7 @@
     "target": "es6",
     "allowJs": true
   },
-  "files": ["src/app.js", "src/admin.js"],
+  "files": ["src/app.js"],
   "exclude": [
     "./dist/**/*",
   ]

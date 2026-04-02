@@ -5,6 +5,7 @@ include('src/acf.php');
 
 if (!is_admin()) {
     wp_enqueue_script('app', get_template_directory_uri() . '/dist/app.js');
+    wp_enqueue_style('app', get_template_directory_uri() . '/dist/app.css');
 }
 
 function allow_svg_uploads($mimes)

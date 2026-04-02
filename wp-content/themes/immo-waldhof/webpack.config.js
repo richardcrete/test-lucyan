@@ -10,8 +10,8 @@ const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader
 /** @type {import("webpack").Configuration} */
 const config = {
     entry: {
-        app: './src/app.js',
-        admin: './src/admin.js'
+        app: [path.resolve(process.cwd(), 'src/styles/', 'index.scss'), path.resolve(process.cwd(), 'src/', 'app.js')],
+        admin: [path.resolve(process.cwd(), 'src/styles/', 'admin.scss')],
     },
     output: {
         asyncChunks: false,
@@ -30,7 +30,7 @@ const config = {
             },
             {
                 test: /\.css$/i,
-                use: [stylesHandler,'css-loader'],
+                use: [stylesHandler, 'css-loader'],
             },
             {
                 test: /\.s[ac]ss$/i,

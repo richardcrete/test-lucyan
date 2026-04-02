@@ -113,8 +113,9 @@ function register_acf_blocks(): void
     ]);
 }
 
-add_action('acf/input/admin_enqueue_scripts', 'acf_admin_enqueue_scripts');
-function acf_admin_enqueue_scripts(): void
+add_action('acf/input/admin_enqueue_scripts', 'acf_admin_enqueue_styles_scripts');
+function acf_admin_enqueue_styles_scripts(): void
 {
-    wp_enqueue_script('admin', get_template_directory_uri() . '/dist/admin.js');
+    wp_enqueue_script('app', get_template_directory_uri() . '/dist/app.js');
+    wp_enqueue_style('admin', get_template_directory_uri() . '/dist/admin.css');
 }
