@@ -10,6 +10,12 @@
  */
 
 ?>
+
+<?php
+
+$totalAds = wp_count_posts('property')->publish ?? 0;
+?>
+
 <div class="SearchForm">
     <div class="SearchForm-container container">
         <form class="SearchForm-form" action="#">
@@ -108,7 +114,7 @@
                     </label>
                 </div>
                 <div class="SearchForm-submit">
-                    <span class="h6"><?= '' ?> annonces disponibles</span>
+                    <span class="h6"><?= $totalAds ?> annonce<?= $totalAds > 1 ? 's' : '' ?> disponible<?= $totalAds > 1 ? 's' : '' ?></span>
                     <button type="submit" class="Button isSecondary">Rechercher</button>
                 </div>
             </div>
