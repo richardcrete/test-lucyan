@@ -4,9 +4,9 @@
 
 ## Durée de réalisation (aperçu)
 - Mise en place du projet (Docker et WordPress) : 1h
-- Création du thème et sa base (variables, configuration webpack) : 2h
-- Intégration "statique" des composants : 2j (14h)
-- Dynamisation des composants et création de blocks et de groupes de champs ACF : 1j (7h)
+- Création du thème et sa base (variables, configuration webpack...) : 2h
+- Intégration "statique" des composants : 2j environ (14h)
+- Dynamisation des composants, création de blocks, de groupes de champs et pages d'options avec ACF : 1j environ (7h)
 - Mise en ligne : 2h
 - Total : 27h environ
 
