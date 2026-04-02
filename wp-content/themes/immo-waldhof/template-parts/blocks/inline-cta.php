@@ -14,7 +14,7 @@
 <div class="InlineCTA isComponent<?= get_field('background') ? ' isLight' : '' ?><?= get_field('position') ? ' isHigher' : '' ?>">
     <div class="container">
         <div class="InlineCTA-content">
-            <h3 class="h3">Je souhaite être informé par mail dès qu’un bien est mis en ligne</h3>
+            <h3 class="h3"><?= get_field('title') ?></h3>
             <a href="<?= get_field('link')['url'] ?>" target="<?= get_field('link')['target'] ?>"
                class="Button isSecondary isBorderRadius">
                 <?php if (get_field('icon')) : ?>
