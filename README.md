@@ -4,7 +4,7 @@
 
 ## Durée de réalisation (aperçu)
 - Mise en place du projet (Docker et WordPress) : 1h
-- Création du thèm et sa base (variables, configuration webpack) : 2h
+- Création du thème et sa base (variables, configuration webpack) : 2h
 - Intégration "statique" des composants : 2j (14h)
 - Dynamisation des composants et création de blocks et de groupes de champs ACF : 1j (7h)
 - Mise en ligne : 2h
@@ -84,6 +84,7 @@
 - Liens utiles tertiaires (bas du pied de page)
 
 ## Les plus (développement)
+- Loader au chargement de la page
 - Animations au scroll sur les Menus desktop et mobile
 - Class TypeScript Slider commune à tous les sliders 
 - Avis Google déroulables
