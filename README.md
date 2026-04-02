@@ -83,7 +83,7 @@
 - Liens utiles secondaires (2 colonnes de droite)
 - Liens utiles tertiaires (bas du pied de page)
 
-## Les plus (développement)
+## Ajouts personnels (dev)
 - Loader au chargement de la page
 - Animations au scroll sur les Menus desktop et mobile
 - Class TypeScript Slider commune à tous les sliders 
