@@ -47,7 +47,7 @@ function register_acf_blocks(): void
         'icon' => array(
             'background' => '#fff',
             'foreground' => '#000',
-            'src' => 'home',
+            'src' => 'admin-home',
         ),
         'render_template' => get_template_directory() . '/template-parts/blocks/properties-slider.php',
     ]);
@@ -59,7 +59,7 @@ function register_acf_blocks(): void
         'icon' => array(
             'background' => '#fff',
             'foreground' => '#000',
-            'src' => 'learn-more',
+            'src' => 'welcome-learn-more',
         ),
         'render_template' => get_template_directory() . '/template-parts/blocks/manifesto.php',
     ]);
