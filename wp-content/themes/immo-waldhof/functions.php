@@ -19,8 +19,8 @@ add_filter('upload_mimes', 'allow_svg_uploads');
 function add_favicon_to_admin()
 {
     echo '<link rel="icon" type="image/png" href="' . get_template_directory_uri() . '/src/assets/favicon/favicon-96x96.png" sizes="96x96"/>
-    <link rel="icon" type="image/svg+xml" href="' . get_template_directory_uri() . 'src/assets/favicon/favicon.svg"/>
-    <link rel="shortcut icon" href="' . get_template_directory_uri() . 'src/assets/favicon/favicon.ico"/>';
+    <link rel="icon" type="image/svg+xml" href="' . get_template_directory_uri() . '/src/assets/favicon/favicon.svg"/>
+    <link rel="shortcut icon" href="' . get_template_directory_uri() . '/src/assets/favicon/favicon.ico"/>';
 }
 
 add_action('admin_head', 'add_favicon_to_admin');
