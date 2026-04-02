@@ -20,6 +20,7 @@ if (get_field('properties') === "") {
     $properties = new WP_Query([
             'post_type' => 'property',
             'posts_per_page' => 10,
+            'status' => 'publish',
             'orderby' => 'modified',
     ])->get_posts();
 } else {
@@ -45,7 +46,7 @@ if (get_field('properties') === "") {
                 <?php foreach ($properties as $property) : ?>
                     <?php if ($property instanceof WP_POST) : ?>
                         <div class="Properties-slide<?= count($properties) > 1 ? ' swiper-slide' : '' ?>">
-                            <a href="#" class="Properties-card">
+                            <a href="<?= get_permalink($property) ?>" class="Properties-card">
                                 <div class="Properties-img">
                                     <img src="<?= get_field('image', $property->ID)["url"] ?>"
                                          alt="<?= get_field('image', $property->ID)["url"] ?>">
